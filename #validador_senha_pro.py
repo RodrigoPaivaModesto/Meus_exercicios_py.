@@ -3,7 +3,7 @@
 
 def validador_senha_pro():
     print("--- CADASTRO DE SENHA ULTRA SEGURA ---")
-    # Criamos uma string com os símbolos que queremos aceitar (opcional)
+    
     especiais = "!@#$%¨&*()_+-="
 
     while True:
@@ -16,11 +16,11 @@ def validador_senha_pro():
         for caractere in senha:
             if caractere.isdigit():
                 tem_numero = True
-            # Se não for letra E nem número, é especial
+            
             if not caractere.isalnum():
                 tem_especial = True
-                
-        # Verificação Final
+
+        
         if tamanho_ok and tem_numero and tem_especial:
             print("Senha validada com sucesso!")
             break
@@ -32,5 +32,6 @@ def validador_senha_pro():
                 print("Precisa de pelo menos um número.")
             if not tem_especial:
                 print("Precisa de pelo menos um caractere especial (!@#$...).")
+
 
 validador_senha_pro()
